@@ -10,7 +10,7 @@ class Customer(models.Model):
     name = models.CharField(max_length=100)
     phone = models.CharField(max_length=15)
     mail = models.EmailField()
-    date = models.DateTimeField()
+
 
 
     # def publish(self):
@@ -36,6 +36,3 @@ class RequestsRegister(models.Model):
     service = models.ForeignKey('Service', on_delete=models.CASCADE)
     service_date = models.DateTimeField(default=timezone.now)
 
-
-    def __str__(self):
-        return self.service_name
