@@ -32,10 +32,10 @@ class Service(models.Model):
 
 
 class RequestsRegister(models.Model):
-
+    request_name = models.CharField(max_length=100)
     customer = models.ForeignKey('Customer', on_delete=models.CASCADE)
     service = models.ForeignKey('Service', on_delete=models.CASCADE)
     service_date = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
-        return self.service
+        return self.request_name
