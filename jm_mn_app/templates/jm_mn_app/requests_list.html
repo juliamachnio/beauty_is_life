@@ -6,19 +6,13 @@
         <div>
             <h1><a href="/">Beauty App</a></h1>
         </div>
-
-        <div>
-            <h2><a href="">My first appointment</a></h2>
-            <p>date: 21.04.2022, 12:14</p>
-            <p>customer: Julia Machnio</p>
-            <p>service: Mycie stoopek</p>
-        </div>
-
-        <div>
-            <h2><a href="">My second appointment</a></h2>
-            <p>date: 14.06.2014, 12:14</p>
-            <p>customer: Monika Noga</p>
-            <p>service: Peeling</p>
-        </div>
+        {%  for req in requests_register %}
+            <div>
+                <h2>Nazwa zabiegu: <a href=" ">{{ req.request_name }}</a></h2>
+                <p>{{ req.customer }}  </p>
+                <p>{{ req.service }}</p>
+                <p>{{ req.service_date }}</p>
+            </div>
+        {% endfor %}
     </body>
 </html>
