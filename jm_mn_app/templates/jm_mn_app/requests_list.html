@@ -1,18 +1,29 @@
+{% load static %}
 <html>
     <head>
         <title>Beauty App</title>
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/jm_mn_app.css' %}">
     </head>
     <body>
-        <div>
+        <div class="page-header">
             <h1><a href="/">Beauty App</a></h1>
         </div>
-        {%  for req in requests_register %}
-            <div>
-                <h2>Nazwa zabiegu: <a href=" ">{{ req.request_name }}</a></h2>
-                <p>{{ req.customer }}  </p>
-                <p>{{ req.service }}</p>
-                <p>{{ req.service_date }}</p>
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                    {%  for req in requests_register %}
+                        <div class="req">
+                            <h2>Nazwa zabiegu: <a href=" ">{{ req.request_name }}</a></h2>
+                            <p>{{ req.customer }}  </p>
+                            <p>{{ req.service }}</p>
+                            <p>{{ req.service_date }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
             </div>
-        {% endfor %}
+        </div>
     </body>
 </html>
