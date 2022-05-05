@@ -1,0 +1,14 @@
+{% extends 'jm_mn_app/base.html' %}
+
+{% block content %}
+
+        <div class="req">
+            <h2>Nazwa zabiegu: <a class="btn btn-default" href="{% url 'request_edit' pk=req.pk %}"><span class="glyphicon glyphicon-pencil"></span></a></h2>
+            <p>{{ req.customer }}  </p>
+            <p>{{ req.service }}</p>
+            <p>{{ req.service_date }}</p>
+        <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+
+
+{% endblock %}

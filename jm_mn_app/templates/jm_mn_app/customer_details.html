@@ -1,0 +1,14 @@
+{% extends 'jm_mn_app/base.html' %}
+
+{% block content %}
+
+        <div class="req">
+            <h2>Nazwa klienta: <a class="btn btn-default" href="{% url 'customer_edit' pk=req.pk %}"><span class="glyphicon glyphicon-pencil"></span></a></h2>
+            <p>{{ req.name }}  </p>
+            <p>{{ req.phone }}</p>
+            <p>{{ req.mail }}</p>
+        <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+
+
+{% endblock %}

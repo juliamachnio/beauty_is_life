@@ -3,10 +3,30 @@
 {% block content %}
     {%  for req in requests_register %}
         <div class="req">
-            <h2>Nazwa zabiegu: <a href=" ">{{ req.request_name }}</a></h2>
-            <p>{{ req.customer }}  </p>
-            <p>{{ req.service }}</p>
-            <p>{{ req.service_date }}</p>
+            <h2>Nazwa zabiegu: <a href="{% url 'request_details' pk=req.pk %}">{{ req.request_name }}</a></h2>
+            <p> <a href="{% url 'customer_details' pk=req.pk %}">{{ req.customer }}</a> </p>
+            <p> <a href="{% url 'service_details' pk=req.pk %}">{{ req.service }}</a></p>
+
+
         </div>
+
     {% endfor %}
+
+    <div class="pagination">
+    <span class="step-links">
+        {% if requests_register.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ requests_register.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ requests_register.number }} of {{ requests_register.paginator.num_pages }}.
+        </span>
+
+        {% if requests_register.has_next %}
+            <a href="?page={{ requests_register.next_page_number }}">next</a>
+            <a href="?page={{ requests_register.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+</div>
 {% endblock %}
