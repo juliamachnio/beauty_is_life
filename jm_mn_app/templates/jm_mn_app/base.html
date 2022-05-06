@@ -8,13 +8,14 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <link rel="stylesheet" href="{% static 'css/jm_mn_app.css' %}">
+        <script src="{% static 'js/main.js' %}"></script>
 
 
     </head>
     <body>
     <div class="page-header" >
 
-        <h1 id="main_header" ><a href="/">Life is beauty</a></h1>
+        <h1 onmouseover="mOver(this)" onmouseout="mOut(this)" ><a href="/">Life is beauty</a></h1>
 </div>
     <div class="extra-header" >
 
@@ -23,7 +24,7 @@
         Dodaj zdarzenie <a href="{% url 'request_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a></h3>
         <h3><a href="{% url 'export_customers_csv' %}" class="btn btn-secondary">Download customers data</a>
         <a href="{% url 'export_services_csv' %}" class="btn btn-secondary">Download services data</a>
-        <a href="{% url 'export_requests_csv' %}" class="btn btn-secondary">Download requests data</a><h3>
+        <a href="{% url 'export_requests_csv' %}" class="btn btn-secondary">Download requests data</a></h3>
 
     </div>
 
