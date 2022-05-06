@@ -9,7 +9,7 @@ class CustomerForm(forms.ModelForm):
     class Meta:
 
         model = Customer
-        fields = ('name', 'phone', 'mail', 'image')
+        fields = ('name', 'phone', 'mail', 'image',)
 
 
 class ServiceForm(forms.ModelForm):

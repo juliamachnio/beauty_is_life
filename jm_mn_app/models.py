@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.db import models
 from django.utils import timezone
+from django.core.validators import MaxValueValidator, MinValueValidator
 
     #klient
     #usługa
@@ -11,7 +12,6 @@ class Customer(models.Model):
     phone = models.CharField(max_length=15)
     mail = models.EmailField()
     image = models.ImageField(upload_to="images/", null=True, blank=True)
-
 
     # def publish(self):
     #     self.published_date = timezone.now()

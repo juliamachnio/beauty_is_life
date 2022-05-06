@@ -74,7 +74,9 @@ def service_new(request):
             return redirect('service_details', pk=service.pk)
     else:
         form = ServiceForm()
-    return render(request, 'jm_mn_app/service_edit.html', {'form': form})
+
+        context = {'form': form}
+    return render(request, 'jm_mn_app/service_edit.html', context)
 
 
 def request_new(request):
