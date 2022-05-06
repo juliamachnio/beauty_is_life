@@ -1,6 +1,19 @@
 {% extends 'jm_mn_app/base.html' %}
 
+
 {% block content %}
+
+    <div>
+    <form method="get">
+        {{ myFilter.form }}
+        <button class="btn btn-primary" type="submit">
+            Search
+        </button>
+    </form>
+    </div>
+
+
+
     {%  for req in requests_register %}
         <div class="req">
             <h2>Nazwa zabiegu: <a href="{% url 'request_details' pk=req.pk %}">{{ req.request_name }}</a></h2>

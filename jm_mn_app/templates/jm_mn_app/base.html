@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="{% static 'css/jm_mn_app.css' %}">
+
     </head>
     <body>
     <div class="page-header">
@@ -15,7 +16,12 @@
         <h2>Dodaj klienta: <a href="{% url 'customer_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a></h2>
         <h2>Dodaj usługę: <a href="{% url 'service_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a></h2>
         <h2>Dodaj zdarzenie: <a href="{% url 'request_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a></h2>
+        <a href="{% url 'export_customers_csv' %}" class="btn btn-secondary">Download customers data</a>
+        <a href="{% url 'export_services_csv' %}" class="btn btn-secondary">Download services data</a>
+        <a href="{% url 'export_requests_csv' %}" class="btn btn-secondary">Download requests data</a>
+
     </div>
+
     <div class="content container">
         <div class="row">
             <div class="col-md-8">
@@ -24,5 +30,6 @@
             </div>
         </div>
     </div>
+
 </body>
 </html>
