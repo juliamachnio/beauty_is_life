@@ -1,9 +1,13 @@
 {% extends 'jm_mn_app/base.html' %}
 
 {% block content %}
-    <h2>Nowy Klient</h2>
-    <form method="POST" class="post-form">{% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="save btn btn-default">Save</button>
-    </form>
+    <h2>Edytuj klienta</h2>
+    <div class="post-form">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.media }}
+            {{ form.as_p }}
+            <button type="submit" class="save btn btn-default">Save</button>
+        </form>
+    </div>
 {% endblock %}

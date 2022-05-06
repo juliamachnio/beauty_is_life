@@ -109,7 +109,7 @@ def service_edit(request, pk):
         if form.is_valid():
             service = form.save(commit=False)
             service.save()
-            return redirect('request_details', pk=service.pk)
+            return redirect('service_details', pk=service.pk)
     else:
         form = ServiceForm(instance=service)
     return render(request, 'jm_mn_app/service_edit.html', {'form': form})
@@ -118,11 +118,11 @@ def service_edit(request, pk):
 def customer_edit(request, pk):
     customer = get_object_or_404(Customer, pk=pk)
     if request.method == "POST":
-        form = CustomerForm(request.POST, instance=customer)
+        form = CustomerForm(request.POST, request.FILES, instance=customer)
         if form.is_valid():
             customer = form.save(commit=False)
             customer.save()
-            return redirect('request_details', pk=customer.pk)
+            return redirect('customer_details', pk=customer.pk)
     else:
         form = CustomerForm(instance=customer)
     return render(request, 'jm_mn_app/customer_edit.html', {'form': form})

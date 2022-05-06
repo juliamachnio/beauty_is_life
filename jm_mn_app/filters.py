@@ -10,4 +10,4 @@ class RequestFilter(django_filters.FilterSet):
     class Meta:
         model = RequestsRegister
         fields = '__all__'
-        #exclude = ['service_date']
+        #exclude = ['image']
