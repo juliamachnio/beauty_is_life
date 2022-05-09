@@ -24,7 +24,7 @@ def requests_list(request):
     myFilter = RequestFilter(request.GET, queryset=requests_register)
     requests_register = myFilter.qs
 
-    paginator = Paginator(requests_register, 2)
+    paginator = Paginator(requests_register, 4)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
 

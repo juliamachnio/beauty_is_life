@@ -1,7 +1,7 @@
 {% extends 'jm_mn_app/base.html' %}
 
 {% block content %}
-    <h2>Edytuj zdarzenie</h2>
+    <h3>Edytuj zdarzenie</h3>
     <form method="POST" class="post-form">{% csrf_token %}
         {{ form.as_p }}
         <button type="submit" class="save btn btn-default">Save</button>

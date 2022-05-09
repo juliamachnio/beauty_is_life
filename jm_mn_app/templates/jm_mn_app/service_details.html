@@ -3,11 +3,11 @@
 {% block content %}
 
         <div class="req">
-            <h2>Nazwa usługi: <a class="btn btn-default" href="{% url 'service_edit' pk=req.pk %}"><span class="glyphicon glyphicon-pencil"></span></a></h2>
-            <p>{{ req.service_name }}  </p>
-            <p>{{ req.service_description }}</p>
-            <p>{{ req.price }}</p>
-            <p>{{ req.duration }}</p>
+            <h3>Dane szczególowe usługi: <a class="btn btn-default" href="{% url 'service_edit' pk=req.pk %}"><span class="glyphicon glyphicon-pencil"></span></a></h3>
+            <p>Nazwa usługi: {{ req.service_name }}  </p>
+            <p>Opis usługi: {{ req.service_description }}</p>
+            <p>Cena: {{ req.price }}</p>
+            <p>Czas trwania: {{ req.duration }}</p>
         <p>{{ post.text|linebreaksbr }}</p>
         </div>
 

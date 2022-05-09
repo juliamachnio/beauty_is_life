@@ -16,11 +16,10 @@
 
     {%  for req in requests_register %}
         <div class="req">
-            <h2>Nazwa zabiegu: <a href="{% url 'request_details' pk=req.pk %}">{{ req.request_name }}</a></h2>
-            <p> <a href="{% url 'customer_details' pk=req.pk %}">{{ req.customer }}</a> </p>
-            <p> <a href="{% url 'service_details' pk=req.pk %}">{{ req.service }}</a></p>
+            <h3>Nazwa zabiegu: <a href="{% url 'request_details' pk=req.pk %}">{{ req.request_name }}</a></h3>
 
-
+            <p> Zabieg: <a href="{% url 'service_details' pk=req.pk %}">{{ req.service }}</a></p>
+            <p> Klient: <a href="{% url 'customer_details' pk=req.pk %}"> {{ req.customer }}</a> </p>
         </div>
 
     {% endfor %}

@@ -27,9 +27,15 @@ h1, h2,  h4 {
     font-family: 'Lobster', cursive;
 
 }
-h3{
+h2{
     font-family: 'Lobster', cursive;
     color: #ffffff;
+
+}
+h3{
+    font-family: 'Lobster', cursive;
+    /*color: #ffffff;*/
+
 }
 
 .date {
@@ -58,4 +64,10 @@ h3{
 .req h2 a, .post h1 a:visited {
     color: #000000;
 }
-
+.footer {
+    /*position: fixed;*/
+    font-family: 'Lobster', cursive;
+    color: #ffffff;
+    background-color: lightpink;
+    text-align: center;
+}

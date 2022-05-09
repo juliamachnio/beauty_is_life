@@ -6,9 +6,9 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-        <link rel="stylesheet" href="{% static 'css/jm_mn_app.css' %}">
         <script src="{% static 'js/main.js' %}"></script>
+        <link rel="stylesheet" href="{% static 'css/jm_mn_app.css' %}">
+
 
 
     </head>
@@ -17,14 +17,12 @@
 
         <h1 onmouseover="mOver(this)" onmouseout="mOut(this)" ><a href="/">Life is beauty</a></h1>
 </div>
-    <div class="extra-header" >
+    <div class="extra-header">
 
-        <h3>Dodaj klienta <a href="{% url 'customer_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+        <h2>Dodaj klienta <a href="{% url 'customer_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
         Dodaj usługę <a href="{% url 'service_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-        Dodaj zdarzenie <a href="{% url 'request_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a></h3>
-        <h3><a href="{% url 'export_customers_csv' %}" class="btn btn-secondary">Download customers data</a>
-        <a href="{% url 'export_services_csv' %}" class="btn btn-secondary">Download services data</a>
-        <a href="{% url 'export_requests_csv' %}" class="btn btn-secondary">Download requests data</a></h3>
+        Dodaj zdarzenie <a href="{% url 'request_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a></h2>
+
 
     </div>
 
@@ -37,7 +35,11 @@
         </div>
     </div>
 
-
+<div class="footer">
+    <h3><a href="{% url 'export_customers_csv' %}" class="btn btn-secondary">Download customers data</a>
+        <a href="{% url 'export_services_csv' %}" class="btn btn-secondary">Download services data</a>
+        <a href="{% url 'export_requests_csv' %}" class="btn btn-secondary">Download requests data</a></h3>
+</div>
 
 
 </body>
